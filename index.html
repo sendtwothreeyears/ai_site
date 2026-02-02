@@ -1,137 +1,266 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Blog</title>
-    <meta name="description" content="Thoughts, stories, and ideas.">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    
+    <meta name="description" content="Thoughts, stories, and ideas." />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <header class="site-header">
-        <nav class="nav-container">
-            <ul class="nav-links">
-                <li><a href="/">home</a></li>
-                <li><a href="/writing.html">writing</a></li>
-                <li><a href="/series/fractal.html">fractal</a></li>
-            </ul>
-        </nav>
+      <nav class="nav-container">
+        <ul class="nav-links">
+          <li><a href="/" class="active">home</a></li>
+          <li><a href="/writing.html">writing</a></li>
+          <li><a href="/series/fractal.html">fractal</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main class="container">
-        <section class="hero">
-            <div class="hero-photo">
-                <img src="/images/profile.jpeg" alt="Frank">
+      <section class="hero">
+        <div class="hero-photo">
+          <img src="/images/profile.jpeg" alt="Frank" />
+        </div>
+        <h1>hello, i'm frank.</h1>
+        <p class="hero-subtitle">You can see some of my work below 👇</p>
+        <p class="hero-bio">
+          Hi there! My name is Frank, and I'm a software engineer! This site is
+          a personal collection of reading, writing, and experiences inside and
+          outside of engineering.
+        </p>
+      </section>
+
+      <section class="projects-section">
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3 class="project-title">
+              <a href="https://kasamd.com" target="_blank" rel="noopener"
+                >KasaMD</a
+              >
+            </h3>
+            <div class="project-card-inner">
+              <a
+                href="https://kasamd.com"
+                target="_blank"
+                rel="noopener"
+                class="project-image"
+                ><img
+                  src="/images/Pasted%20image%2020260202151643.png"
+                  alt="KasaMD"
+              /></a>
+              <div class="project-content">
+                <p class="project-description">
+                  AI-powered, zero-cost medical documentation and record
+                  management platform serving underserved healthcare providers
+                  in resource-limited settings.
+                </p>
+                <p class="project-detail">→ Software Engineer</p>
+                <p class="project-detail">
+                  → React.js, TypeScript, Node.js, GraphQL, PostgreSQL, AWS,
+                  OpenAI, Google Gemini
+                </p>
+              </div>
             </div>
-            <h1>hello, i'm frank.</h1>
-            <p class="hero-subtitle">You can see some of my work below 👇</p>
-            <p class="hero-bio">Hi there! My name is Frank, and I'm a software engineer! This site is a personal collection of reading, writing, and experiences inside and outside of engineering.</p>
-        </section>
+          </article>
 
-        
-        <section class="projects-section">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-
-            <article class="project-card">
-                <h3 class="project-title"><a href="https://kasamd.com" target="_blank" rel="noopener">KasaMD</a></h3>
-                <div class="project-card-inner">
-                    <a href="https://kasamd.com" target="_blank" rel="noopener" class="project-image"><img src="/images/Pasted%20image%2020260202151643.png" alt="KasaMD"></a>
-                    <div class="project-content">
-                        <p class="project-description">AI-powered, zero-cost medical documentation and record management platform serving underserved healthcare providers in resource-limited settings.</p>
-                    <p class="project-detail">→ Software Engineer</p>
-                    <p class="project-detail">→ React.js, TypeScript, Node.js, GraphQL, PostgreSQL, AWS, OpenAI, Google Gemini</p>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card">
-                <h3 class="project-title"><a href="https://nagomi.chat" target="_blank" rel="noopener">Nagomi.chat</a></h3>
-                <div class="project-card-inner">
-                    <a href="https://nagomi.chat" target="_blank" rel="noopener" class="project-image"><img src="/images/Pasted%20image%2020260202151701.png" alt="Nagomi.chat"></a>
-                    <div class="project-content">
-                        <p class="project-description">Conversational artificial intelligence mental health agent developed using OpenAI models.</p>
-                    <p class="project-detail">→ Solo Developer</p>
-                    <p class="project-detail">→ React.js, TypeScript, Python, PostgreSQL, AWS, OpenAI</p>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card">
-                <h3 class="project-title"><a href="https://findskin.care" target="_blank" rel="noopener">Findskin.care</a></h3>
-                <div class="project-card-inner">
-                    <a href="https://findskin.care" target="_blank" rel="noopener" class="project-image"><img src="/images/Pasted%20image%2020260202151720.png" alt="Findskin.care"></a>
-                    <div class="project-content">
-                        <p class="project-description">Search over 11,000 skincare products from across the web.</p>
-                    <p class="project-detail">→ Solo Developer</p>
-                    <p class="project-detail">→ React.js, Node.js, Postgres, AWS Lambda, Cloudwatch, Cheerio.js</p>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card">
-                <h3 class="project-title"><a href="https://www.crunchbase.com/organization/hallo-348f" target="_blank" rel="noopener">Hallo</a></h3>
-                <div class="project-card-inner">
-                    <a href="https://www.crunchbase.com/organization/hallo-348f" target="_blank" rel="noopener" class="project-image"><img src="/images/Pasted%20image%2020260202151924.png" alt="Hallo"></a>
-                    <div class="project-content">
-                        <p class="project-description">Live Q&A platform to connect students to recruiters. Expa Labs Accelerator '17 → closed, 2024</p>
-                    <p class="project-detail">→ Senior Frontend Engineer</p>
-                    <p class="project-detail">→ React.js, Redux, GraphQL, Figma</p>
-                    <p class="project-detail">→ Company/User profiles, Q&A Sessions, Admin</p>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card">
-                <h3 class="project-title"><a href="https://www.didkyriesayit.com/" target="_blank" rel="noopener">Did Kyrie Say It?</a></h3>
-                <div class="project-card-inner">
-                    <a href="https://www.didkyriesayit.com/" target="_blank" rel="noopener" class="project-image"><img src="/images/Pasted%20image%2020260202151944.png" alt="Did Kyrie Say It?"></a>
-                    <div class="project-content">
-                        <p class="project-description">Viral NBA themed app for Reddit.</p>
-                    <p class="project-detail">→ Solo Developer</p>
-                    <p class="project-detail">→ React.js, TypeScript, TailwindCSS, GraphQL</p>
-                    <p class="project-detail">→ #2 on Reddit's /r/nba community</p>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card">
-                <h3 class="project-title"><a href="https://www.socialworkschi.org" target="_blank" rel="noopener">SocialWorks</a></h3>
-                <div class="project-card-inner">
-                    <a href="https://www.socialworkschi.org" target="_blank" rel="noopener" class="project-image"><img src="/images/Pasted%20image%2020260202163658.png" alt="SocialWorks"></a>
-                    <div class="project-content">
-                        <p class="project-description">Viral NBA themed app for Reddit.</p>
-                    <p class="project-detail">→ Solo Developer</p>
-                    <p class="project-detail">→ React.js, TypeScript, TailwindCSS, GraphQL</p>
-                    <p class="project-detail">→ #2 on Reddit's /r/nba community</p>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card">
-                <h3 class="project-title"><a href="[]org](https://consumerreports.org/)" target="_blank" rel="noopener">Consumer Reports</a></h3>
-                <div class="project-card-inner">
-                    <a href="[]org](https://consumerreports.org/)" target="_blank" rel="noopener" class="project-image"><img src="/images/Pasted%20image%2020260202172032.png" alt="Consumer Reports"></a>
-                    <div class="project-content">
-                        <p class="project-description">Viral NBA themed app for Reddit.</p>
-                    <p class="project-detail">→ Solo Developer</p>
-                    <p class="project-detail">→ React.js, TypeScript, TailwindCSS, GraphQL</p>
-                    <p class="project-detail">→ #2 on Reddit's /r/nba community</p>
-                    </div>
-                </div>
-            </article>
+          <article class="project-card">
+            <h3 class="project-title">
+              <a href="https://nagomi.chat" target="_blank" rel="noopener"
+                >Nagomi.chat</a
+              >
+            </h3>
+            <div class="project-card-inner">
+              <a
+                href="https://nagomi.chat"
+                target="_blank"
+                rel="noopener"
+                class="project-image"
+                ><img
+                  src="/images/Pasted%20image%2020260202151701.png"
+                  alt="Nagomi.chat"
+              /></a>
+              <div class="project-content">
+                <p class="project-description">
+                  Conversational artificial intelligence mental health agent
+                  developed using OpenAI models.
+                </p>
+                <p class="project-detail">→ Solo Developer</p>
+                <p class="project-detail">
+                  → React.js, TypeScript, Python, PostgreSQL, AWS, OpenAI
+                </p>
+              </div>
             </div>
-        </section>
-        
+          </article>
+
+          <article class="project-card">
+            <h3 class="project-title">
+              <a href="https://findskin.care" target="_blank" rel="noopener"
+                >Findskin.care</a
+              >
+            </h3>
+            <div class="project-card-inner">
+              <a
+                href="https://findskin.care"
+                target="_blank"
+                rel="noopener"
+                class="project-image"
+                ><img
+                  src="/images/Pasted%20image%2020260202151720.png"
+                  alt="Findskin.care"
+              /></a>
+              <div class="project-content">
+                <p class="project-description">
+                  Search over 11,000 skincare products from across the web.
+                </p>
+                <p class="project-detail">→ Solo Developer</p>
+                <p class="project-detail">
+                  → React.js, Node.js, Postgres, AWS Lambda, Cloudwatch,
+                  Cheerio.js
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3 class="project-title">
+              <a
+                href="https://www.crunchbase.com/organization/hallo-348f"
+                target="_blank"
+                rel="noopener"
+                >Hallo</a
+              >
+            </h3>
+            <div class="project-card-inner">
+              <a
+                href="https://www.crunchbase.com/organization/hallo-348f"
+                target="_blank"
+                rel="noopener"
+                class="project-image"
+                ><img
+                  src="/images/Pasted%20image%2020260202151924.png"
+                  alt="Hallo"
+              /></a>
+              <div class="project-content">
+                <p class="project-description">
+                  Live Q&A platform to connect students to recruiters. Expa Labs
+                  Accelerator '17 → closed, 2024
+                </p>
+                <p class="project-detail">→ Senior Frontend Engineer</p>
+                <p class="project-detail">→ React.js, Redux, GraphQL, Figma</p>
+                <p class="project-detail">
+                  → Company/User profiles, Q&A Sessions, Admin
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3 class="project-title">
+              <a
+                href="https://www.didkyriesayit.com/"
+                target="_blank"
+                rel="noopener"
+                >Did Kyrie Say It?</a
+              >
+            </h3>
+            <div class="project-card-inner">
+              <a
+                href="https://www.didkyriesayit.com/"
+                target="_blank"
+                rel="noopener"
+                class="project-image"
+                ><img
+                  src="/images/Pasted%20image%2020260202151944.png"
+                  alt="Did Kyrie Say It?"
+              /></a>
+              <div class="project-content">
+                <p class="project-description">
+                  Viral NBA themed app for Reddit.
+                </p>
+                <p class="project-detail">→ Solo Developer</p>
+                <p class="project-detail">
+                  → React.js, TypeScript, TailwindCSS, GraphQL
+                </p>
+                <p class="project-detail">→ #2 on Reddit's /r/nba community</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3 class="project-title">
+              <a
+                href="https://www.socialworkschi.org"
+                target="_blank"
+                rel="noopener"
+                >SocialWorks</a
+              >
+            </h3>
+            <div class="project-card-inner">
+              <a
+                href="https://www.socialworkschi.org"
+                target="_blank"
+                rel="noopener"
+                class="project-image"
+                ><img
+                  src="/images/Pasted%20image%2020260202163658.png"
+                  alt="SocialWorks"
+              /></a>
+              <div class="project-content">
+                <p class="project-description">
+                  Viral NBA themed app for Reddit.
+                </p>
+                <p class="project-detail">→ Solo Developer</p>
+                <p class="project-detail">
+                  → React.js, TypeScript, TailwindCSS, GraphQL
+                </p>
+                <p class="project-detail">→ #2 on Reddit's /r/nba community</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3 class="project-title">
+              <a
+                href="[]org](https://consumerreports.org/)"
+                target="_blank"
+                rel="noopener"
+                >Consumer Reports</a
+              >
+            </h3>
+            <div class="project-card-inner">
+              <a
+                href="[]org](https://consumerreports.org/)"
+                target="_blank"
+                rel="noopener"
+                class="project-image"
+                ><img
+                  src="/images/Pasted%20image%2020260202172032.png"
+                  alt="Consumer Reports"
+              /></a>
+              <div class="project-content">
+                <p class="project-description">
+                  Viral NBA themed app for Reddit.
+                </p>
+                <p class="project-detail">→ Solo Developer</p>
+                <p class="project-detail">
+                  → React.js, TypeScript, TailwindCSS, GraphQL
+                </p>
+                <p class="project-detail">→ #2 on Reddit's /r/nba community</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2026 My Blog. All rights reserved.</p>
-        </div>
+      <div class="container">
+        <p>&copy; 2026 My Blog. All rights reserved.</p>
+      </div>
     </footer>
 
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>

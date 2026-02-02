@@ -349,14 +349,18 @@ function readProjectsFromFolder(folderPath) {
 }
 
 // Generate nav HTML
-function generateNav() {
+function generateNav(activePage = '') {
+    const homeActive = activePage === 'home' ? ' class="active"' : '';
+    const writingActive = activePage === 'writing' ? ' class="active"' : '';
+    const fractalActive = activePage === 'fractal' ? ' class="active"' : '';
+
     return `
     <header class="site-header">
         <nav class="nav-container">
             <ul class="nav-links">
-                <li><a href="/">home</a></li>
-                <li><a href="/writing.html">writing</a></li>
-                <li><a href="/series/fractal.html">fractal</a></li>
+                <li><a href="/"${homeActive}>home</a></li>
+                <li><a href="/writing.html"${writingActive}>writing</a></li>
+                <li><a href="/series/fractal.html"${fractalActive}>fractal</a></li>
             </ul>
         </nav>
     </header>`;
@@ -478,7 +482,7 @@ function generateIndexHTML(projects) {
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    ${generateNav()}
+    ${generateNav('home')}
 
     <main class="container">
         <section class="hero">
@@ -538,7 +542,7 @@ function generateWritingHTML(articles, fractalPosts) {
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    ${generateNav()}
+    ${generateNav('writing')}
 
     <main class="container container-narrow">
         <section class="page-header">
@@ -583,7 +587,7 @@ function generateSeriesHTML(seriesName, posts) {
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    ${generateNav()}
+    ${generateNav('fractal')}
 
     <main class="container">
         <section class="series-header">
