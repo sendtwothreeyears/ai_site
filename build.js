@@ -482,8 +482,12 @@ function generateIndexHTML(projects) {
 
     <main class="container">
         <section class="hero">
-            <h1>${SITE_TITLE}</h1>
-            <p>${SITE_DESCRIPTION}</p>
+            <div class="hero-photo">
+                <img src="https://placehold.co/200x200/e2e8f0/475569?text=Photo" alt="Frank">
+            </div>
+            <h1>hello, i'm frank.</h1>
+            <p class="hero-subtitle">You can see some of my work below 👇</p>
+            <p class="hero-bio">Hi there! My name is Frank, and I'm a software engineer! This site is a personal collection of reading, writing, and experiences inside and outside of engineering.</p>
         </section>
 
         ${projects.length > 0 ? `
