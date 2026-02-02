@@ -122,10 +122,8 @@ img {
 }
 
 .hero-photo img {
-  width: 200px;
-  height: 200px;
-  border-radius: 12px;
-  object-fit: cover;
+  max-width: 150px;
+  border-radius: 4px;
 }
 
 .hero h1 {

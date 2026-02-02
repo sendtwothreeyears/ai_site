@@ -483,7 +483,7 @@ function generateIndexHTML(projects) {
     <main class="container">
         <section class="hero">
             <div class="hero-photo">
-                <img src="https://placehold.co/200x200/e2e8f0/475569?text=Photo" alt="Frank">
+                <img src="/images/profile.jpeg" alt="Frank">
             </div>
             <h1>hello, i'm frank.</h1>
             <p class="hero-subtitle">You can see some of my work below 👇</p>
