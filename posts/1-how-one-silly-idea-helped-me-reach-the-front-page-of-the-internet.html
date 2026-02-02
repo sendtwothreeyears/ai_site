@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How One Silly Idea Helped Me Reach The "Front Page" of the Internet - My Blog</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    
+    <header class="site-header">
+        <nav class="nav-container">
+            <ul class="nav-links">
+                <li><a href="/">home</a></li>
+                <li><a href="/writing.html">writing</a></li>
+                <li><a href="/series/fractal.html">fractal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <article>
+            <header class="post-header">
+                <time class="post-date">Unknown date</time>
+                <h1>How One Silly Idea Helped Me Reach The "Front Page" of the Internet</h1>
+            </header>
+
+            
+
+            <div class="post-content">
+                <p>I launched a <a href="https://didkyriesayit.com">simple little app</a> that went #2 on Reddit&#39;s NBA subreddit, which has 7 million+ subscribers. <a href="https://www.reddit.com/r/nba/comments/c8p4d9/oc_did_kyrie_say_it_a_simple_quiz_to_see_if_you/">Here&#39;s the original post</a>!</p>
+<p>It was disgustingly simple to make, andI just wanted to throw it up online and see if I could validate a simple idea I had in my head, or at least, get any attention.</p>
+<p>(<strong>2023 update: I developed the site again after Heroku removed free-tier hosted applications).</strong></p>
+<h2><strong>Backstory</strong></h2>
+<p>I haven&#39;t built any side-projects in a while, so I wanted to build something <em>real simple</em> with some inkling of virality built in, as opposed to a technical masterpiece that most people don&#39;t care about. Knowing your audience and building things for yourself and for others like you, to me, is the best way to tackle creating a business, and I used this project as an experiment in that direction.</p>
+<p>I haven&#39;t had many experiences of building a project, where while building, I knew whether it was actually a good idea - doing this forced me to consider that &quot;this may not be worth it&quot; while still trudging on.</p>
+<p>It&#39;s an important lesson to internalize, and for me (at least even a little bit) helped solidify the objective of sticking with the process of creation rather than obsessing over the end destination, be it views or money.</p>
+<p>Given how simple this project was to make, it&#39;s essentially an MVP. In the future, the obvious plan is to make something much more simple than this to validate the &quot;idea&quot;, and only then focus on the execution.</p>
+<h2><strong>The App</strong></h2>
+<p>I noticed this <a href="https://www.reddit.com/r/bostonceltics/comments/768g34/who_said_it_kyrie_irving_or_jaden_smith/">thread</a> on Reddit about whether quotes came from Kyrie Irving or Jaden Smith. Kyrie Irving, for those unfamiliar, is an amazing professional basketball player who teeters on the conspiracy-laden side of the Internet and wonders/may believe the world is flat, if we landed on the moon, and myriad other conspiracies that I can&#39;t remember or have discovered yet. For a clearer picture, he says stuff like this:</p>
+<p><img src="https://cdn.prod.website-files.com/62a3ed9bfd056d481b7dd97b/6981033a999d21bbac05b2ed_62a3ed9bfd056dbc1d7dda02_Screen%2520Shot%25202019-07-04%2520at%25204.32.55%2520PM.png" alt=""></p>
+<p>I thought it&#39;d be funny to take the list of those quotes, plus others, and make a simple web app where users would guess if a quote came from Kyrie or not. Simple right? Of course. Anyone on the Internet could do this, but I was motivated enough to do something about it.</p>
+<h2><strong>Building the List</strong></h2>
+<p>Over the course of 2-3 hours, I divided my time into quote aggregation and development.</p>
+<p>I searched Reddit for &quot;Kyrie Irving quotes&quot;, found many more threads dedicated to the topic, as well as a <a href="https://www.reddit.com/r/iamverysmart/">dedicated sub</a> to &quot;I am very smart&quot; quotes, amongst others (<a href="https://www.reddit.com/r/im14andthisisdeep/">/r/im14andthisisdeep</a>).</p>
+<p>I aggregated all of the quotes into a list in Google Sheets, and then found the original sources.</p>
+<p><img src="https://cdn.prod.website-files.com/62a3ed9bfd056d481b7dd97b/6981033a999d21bbac05b2e4_62a3ed9bfd056d5a767dd9ff_Screen%2520Shot%25202019-07-04%2520at%25204.36.37%2520PM.png" alt=""></p>
+<p>The fake quotes I ended up using were:</p>
+<ol>
+<li>Other reddit users creating fake Kyrie quotes as a parody</li>
+<li>Quotes from entertainment (Patrick Star, In Living Color, Kanye West, Skyrim) that were similarly ridiculous.</li>
+</ol>
+<p>I created a list of 72 quotes, and the quiz randomly used 12 for every new quiz.</p>
+<p>I then created a very simple web app using jQuery, raw CSS, and hooked into a custom Node + MongoDB database.</p>
+<p>I made sure to capture every user&#39;s answers so I could gather the percentage correct for each question and how accurate I actually was in sourcing questions that could be confused for something Kyrie Irving said.</p>
+<h2><strong>The Result</strong></h2>
+<p>I slapped it on Reddit around 11AM EST and watched what happened. Some hours later, it made it to the front page. It ended up with 5000 upvotes, a bunch of comments, and even got some mentions on the Internet from Yahoo Sports (<a href="https://sports.yahoo.com/thursday-hot-clicks-yankees-minor-121607055.html">in one sentence)</a> and some people from Twitter, like this dude below. Did I mention I got 8 new Twitter followers? Did I also mention I have a total of 8 Twitter followers now? 🤙</p>
+<p><img src="https://cdn.prod.website-files.com/62a3ed9bfd056d481b7dd97b/6981033a999d21bbac05b2ea_62a3ed9bfd056d20d57dda01_Screen%2520Shot%25202019-07-04%2520at%25204.57.38%2520PM.png" alt=""></p>
+<p>On the analytics side, I peaked at around 790~ concurrents, and from that one day I had a total of ~74K page views. Is that good? I have no idea. It&#39;s interesting to me, for what it&#39;s worth.</p>
+<p><img src="https://cdn.prod.website-files.com/62a3ed9bfd056d481b7dd97b/6981033a999d21bbac05b2e7_62a3ed9bfd056d21a07dda04_Screen%2520Shot%25202019-07-04%2520at%25205.00.46%2520PM.png" alt=""></p>
+<p>Lastly, I checked the responses from users in Mongo Compass. From 71 questions, I had an astounding <strong>684,000+ responses (<strong>as of August 2019, now 700,000. The site dropped off <em>hard</em> the next week</strong>)</strong>. Out of those 684,000, roughly 432,000 were answered correctly, leaving the average correct response rate <strong>63%.</strong></p>
+<p><img src="https://cdn.prod.website-files.com/62a3ed9bfd056d481b7dd97b/6981033a999d21bbac05b2dd_62a3ed9bfd056d1e377dda03_Screen%2520Shot%25202019-07-04%2520at%25205.03.59%2520PM.png" alt=""></p>
+<h2><strong>In Summary</strong></h2>
+<p>Was there a point to this?</p>
+<p>Nope. I did it for fun!</p>
+<p>It was nice to see that the questions I chose were just right, not too difficult but not too easy. I got a lot of comments from people saying that it was either way too easy, or that they were considerably stumped.</p>
+<p>One person I sourced for a fake Kyrie quote even told me he responded incorrectly to the quote that he wrote himself.</p>
+<p>The end result wasn&#39;t even that particularly amazing, in my opinion, nor the idea completely original. It was just iterated on differently.</p>
+<p>Overall, starting with a small idea and testing with an audience I am familiar with (shoutout to the &quot;nephews&quot; of /r/NBA) helped me create something that, while in the midst of one of the most hectic off-seasons in NBA history, still managed to land on the front page of a 2 million+ subreddit, <em>as a joke</em>, when every other post had to deal with a trade or trade rumor/speculation.</p>
+<p>Ideas don&#39;t require complex solutions to validate their merit. <a href="https://pbs.twimg.com/media/CQowqaXUkAAhuLG.jpg">Airbnb was a simple web app</a> before it became the monolith it is today. Twitter started out as a <a href="https://www.cnbc.com/2018/09/18/this-is-jack-dorseys-very-first-drawing-of-twitter-from-2005.html">series of sketches from Jack Dorsey</a>.</p>
+<p>While my simple little app isn&#39;t <em>quite</em> the same, it follows along the same lines that I didn&#39;t need to create something technically complex to resonate with the audience I wanted to reach. Many other original posts on /r/nba usually involve well-thought out hypothetical scenarios, unique data analyses of basketball players&#39; performances using the NBA API, but mine is just a simple little quiz.</p>
+<p>In short, making a connection to your audience, and finding the fastest way to test and iterate on an idea to reach them, is far more important than being novel just for the sake of innovation.</p>
+
+            </div>
+
+            
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 My Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

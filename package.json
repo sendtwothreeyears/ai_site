@@ -1,0 +1,19 @@
+{
+  "name": "www",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.js",
+    "serve": "npx serve .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "gray-matter": "^4.0.3",
+    "marked": "^17.0.1"
+  }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding the Event Loop through setTimeout - My Blog</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    
+    <header class="site-header">
+        <nav class="nav-container">
+            <ul class="nav-links">
+                <li><a href="/">home</a></li>
+                <li><a href="/writing.html">writing</a></li>
+                <li><a href="/series/fractal.html">fractal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <article>
+            <header class="post-header">
+                <time class="post-date">Unknown date</time>
+                <h1>Understanding the Event Loop through setTimeout</h1>
+            </header>
+
+            
+
+            <div class="post-content">
+                <p>One of my favorite features of JavaScript is its event loop and how it handles concurrency given JavaScript’s single-threaded nature. Specifically, there’s a lot of <a href="http://en.wikipedia.org/wiki/List_of_ECMAScript_engines">different implementations of JavaScript engines</a>, but I’ll be referring to Google’s open-source V8 engine(which is written in C++ if you’re curious) that provides the runtime environment for Google Chrome.</p>
+<p>In short, <strong>single-threaded</strong> == <strong>single call stack</strong>, and by virtue of being single-threaded, JavaScript can only handle running one line of code at a time (unless you’re using Web Workers, which create separate threads of execution independently of the thread that has access to the UI). If you’re running something that can take a long time (e.g. a network request, or a for loop with 1000 loops to run) the behavior is considered <strong>blocking</strong>. This means that JavaScript won’t run any further lines until the current process has finished.</p>
+<p>The purpose of the Event Loop is to circumvent blocking behavior through using asynchronous callbacks, and allows us to queue asynchronous calls in an event queue while the call-stack is run to completion.</p>
+<p>It’s a clever way to handle concurrency and allow us to run through synchronous operations while waiting for our asynchronous operations to load into our event queue and fire off a callback. These callbacks are loaded onto our event queue and fire off individually after the call stack is empty.</p>
+<p>I’m using a tool called <a href="http://latentflip.com/loupe">Loupe</a> that allows us to go through each line and see exactly when our code is being executed synchronously in the call stack while queuing asynchronous callbacks in our event table, and subsequently our event queue. (In this case, the site refers to it as a WebAPI since setTimeout is an API provided to us, rather than actual being a function in the V8 source code).</p>
+<p>Take this common interview question here using setTimeout. setTimeout will serve as our demonstration of registering asynchronous callbacks and demonstrate how JavaScript can handle concurrency while being single-threaded.</p>
+<blockquote>
+<p>for (var i = 0; i&lt;5; i++){  <br>   setTimeout(function(){console.log(i)},0);<br>}  </p>
+</blockquote>
+<p>What is logged out? Take a minute to think about what’s going on, and after you’ve finished hypothesizing what happens, let’s break down on how to approach this below.</p>
+<p><img src="/images/Pasted%20image%2020260202145715.png" alt="Pasted image 20260202145715"></p>
+<p>The call stack will run through synchronous lines of code, but in our for loop we’re actually running setTimeout on every iteration of our loop.</p>
+<p>Every time we run setTimeout, we are:</p>
+<ol>
+<li>Putting that setTimeout call into our Web APIs/Event Table</li>
+<li>Waiting until the time allotted for the setTimeout passes</li>
+<li>Moving it into our Event/Callback Queue after the time passes.</li>
+<li>Checking to see if our call stack is empty, and if it is, then load the first callback in our event queue on to the call stack. If the call stack still has functions in it, run them all to completion.</li>
+<li>Run the previously loaded callback to completion until the call stack is clear again.</li>
+<li>Repeat steps 4 &amp; 5 until there are no more functions in the Event Queue.</li>
+</ol>
+<p>What ends up happening is that we run setTimeout on i=0, i=1, i=2, i=3, and i=4, and finally reach i=5, at which point we break out of the loop. Now, i is equal to 5, and our asynchronous callbacks are loaded in our Event Table and loaded into our Event Queue once the time has passed for every setTimeout. Each function runs individually, and since each function logs i, they will each log 5.</p>
+<p>In this case, <strong>setTimeout(function(){…},0)</strong> means that we run the callback <strong>as soon as possible</strong> after all of our synchronous code has been executed. We’ll have five queued callbacks, and we’ll have five anonymous functions that all log (5). For a visual representation, click <a href="http://latentflip.com/loupe/?code=CmZvciAodmFyIGkgPSAwOyBpIDwgNTsgaSsrKXsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24oKXsKICAgICAgICBjb25zb2xlLmxvZyhpKTsKICAgIH0sMCkKfQ%3D%3D!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D">here</a>.</p>
+<p>Finally, if we had wanted to console.log(i) in order from 0 to 4, we could wrap it in a function like this:</p>
+<blockquote>
+<p>for (var i = 0; i &lt; 5; i++){  <br>  (function (idx){<br>     setTimeout(function(){<br>        console.log(idx);<br>     },idx * 1000);<br>  }(i))<br>}</p>
+</blockquote>
+
+            </div>
+
+            
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 My Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
