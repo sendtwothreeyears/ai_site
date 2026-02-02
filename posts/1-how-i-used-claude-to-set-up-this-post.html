@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How I Used Claude To Set Up This Post - My Blog</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    
+    <header class="site-header">
+        <nav class="nav-container">
+            <ul class="nav-links">
+                <li><a href="/">home</a></li>
+                <li><a href="/writing.html">writing</a></li>
+                <li><a href="/series/fractal.html">fractal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <article>
+            <header class="post-header">
+                <time class="post-date">Unknown date</time>
+                <h1>How I Used Claude To Set Up This Post</h1>
+            </header>
+
+            
+            <nav class="series-nav">
+                <div class="series-info">
+                    <a href="/series/fractal.html">Fractal</a>
+                    <span class="series-progress">Part 2 of 2</span>
+                </div>
+                <div class="series-links">
+                    <a href="/posts/0-eval.html" class="prev-post">← Eval</a>
+                    <span></span>
+                </div>
+            </nav>
+
+            <div class="post-content">
+                <p>Previously, my old website was situated at <a href="fs29.webflow.io">fs29.webflow.io</a>.</p>
+<p>This is a site I have handcrafted and used for <em>years</em> - inspired by this site <a href="https://gregkohn.com/">https://gregkohn.com/</a>, a person whose interview I once failed for a technical JavaScript interview!</p>
+<p>Webflow, for me, is too expensive. My site is barebones, namely some short articles and previously job and work descriptions. For me, enabling this on Webflow would cost me $276 a year, or $29 a month. This is a problem - I am cheap. </p>
+<p>For years I simply used a simple redirect, directing all traffic from this site to webflow&#39;s custom domain. Instead, I decided to undo this laziness by building a proprietary version in 3 hours.</p>
+<p>To accomplish this, I spent the first day at <a href="https://fractalbootcamp.com/">Fractal</a>, a NYC-based accelerator for software engineers looking to upscale their artificial intelligence background, on rapidly iterating on this.</p>
+<p>After Andrew detailed a cursory, yet effective, explanation to embrace diving deep into Claude Code, I jumped in. Before, I was copy pasting entire code files into Claude, demanding its agency as I sat by in a lazy stupor.</p>
+<p>Admittedly, I did much of the same, but less copy-pasting instead <a href="https://code.claude.com/docs/en/setup">using Claude within the terminal</a>. This is still a learning journey for me, but I was aghast learning just how <em>long</em> I had been doing this the wrong way by using Claude&#39;s native app to copy-paste production-critical software. Being in a space of 25+ other developers, this knowledge transfer took mere seconds (another thing I love about being here in the short time so far!)</p>
+<p>I decided to try an interesting approach. Where will I create, edit, and store my blog posts?</p>
+<p>I ended up coming up with a unique idea. I would:</p>
+<ul>
+<li>Use Obsidian (which I am currently editing in) to write my posts</li>
+<li>Use my iCloud drive as the source of my Obsidian vault / where all my articles would be stored</li>
+<li>Use Claude to create a build script that would take the latest version of all my posts in my Obsidian vault, convert them to static HTML pages, and serve them to the client.</li>
+</ul>
+<p>The result?</p>
+<p>I have an even more robust, cloud-powered CMS where I&#39;m in control of the data to achieve the exact same functionality as my Webflow site.</p>
+<p>I deployed my site to my domain (which is hosted on Cloudflare Pages), thus taking the total cost down to $0 (except for the one-time cost of my domain).</p>
+<p>This was all done through Claude in a couple of hours. Truly awesome to automate this all so quickly, and only just scratching the surface.</p>
+
+            </div>
+
+            
+            <nav class="series-nav">
+                <div class="series-info">
+                    <a href="/series/fractal.html">Fractal</a>
+                    <span class="series-progress">Part 2 of 2</span>
+                </div>
+                <div class="series-links">
+                    <a href="/posts/0-eval.html" class="prev-post">← Eval</a>
+                    <span></span>
+                </div>
+            </nav>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 My Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
