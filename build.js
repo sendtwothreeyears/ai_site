@@ -443,34 +443,7 @@ function formatProjectDescription(description) {
 }
 
 // Generate homepage HTML
-function generateIndexHTML(projects) {
-  const projectCards = projects
-    .map((project) => {
-      const imageContent = project.image
-        ? `<img src="/images/${encodeURIComponent(project.image)}" alt="${project.title}">`
-        : "";
-
-      const imageHtml = project.image
-        ? project.url
-          ? `<a href="${project.url}" target="_blank" rel="noopener" class="project-image">${imageContent}</a>`
-          : `<div class="project-image">${imageContent}</div>`
-        : "";
-
-      const descriptionHtml = formatProjectDescription(project.description);
-
-      return `
-            <article class="project-card">
-                <h3 class="project-title">${project.url ? `<a href="${project.url}" target="_blank" rel="noopener">${project.title}</a>` : project.title}</h3>
-                <div class="project-card-inner">
-                    ${imageHtml}
-                    <div class="project-content">
-                        ${descriptionHtml}
-                    </div>
-                </div>
-            </article>`;
-    })
-    .join("\n");
-
+function generateIndexHTML() {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -493,18 +466,6 @@ function generateIndexHTML(projects) {
             <p class="hero-bio">Hi there! My name is Frank, and I'm a software engineer! This site is a personal collection of reading, writing, and experiences inside and outside of engineering.</p>
         </section>
 
-        ${
-          projects.length > 0
-            ? `
-        <section class="projects-section">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-${projectCards}
-            </div>
-        </section>
-        `
-            : ""
-        }
     </main>
 
 
@@ -676,7 +637,7 @@ async function build() {
   }
 
   // Generate index page
-  fs.writeFileSync(INDEX_PATH, generateIndexHTML(projects));
+  fs.writeFileSync(INDEX_PATH, generateIndexHTML());
   console.log(`  ✓ Generated: index.html`);
 
   // Generate writing page
