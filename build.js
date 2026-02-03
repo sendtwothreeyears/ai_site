@@ -598,7 +598,7 @@ function generateSeriesHTML(seriesName, posts) {
     <main class="container">
         <section class="series-header">
             <h1>${seriesName}</h1>
-            <p class="series-description">A 90-day journey through a software engineering bootcamp in NYC.</p>
+            <p class="series-description">A 90-day journey through an AI accelerator in NYC.</p>
             <p class="series-meta">${posts.length} posts</p>
         </section>
 
