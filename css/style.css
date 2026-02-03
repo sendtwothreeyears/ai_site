@@ -8,7 +8,7 @@
 }
 
 :root {
-  --color-bg: #fafafa;
+  --color-bg: #fff;
   --color-text: #333;
   --color-text-light: #666;
   --color-primary: #333;
@@ -78,6 +78,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .nav-container {
@@ -158,11 +159,7 @@ img {
 }
 
 .post-card {
-  background: var(--color-card-bg);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 4rem;
 }
 
 .post-date {
@@ -173,8 +170,9 @@ img {
 }
 
 .post-title {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
   margin-bottom: 0.75rem;
   line-height: 1.3;
 }
@@ -184,12 +182,12 @@ img {
 }
 
 .post-title a:hover {
-  color: var(--color-primary);
+  color: var(--color-text-light);
 }
 
 .post-excerpt {
   color: var(--color-text-light);
-  margin-bottom: 1rem;
+  line-height: 1.6;
 }
 
 .read-more {
@@ -309,61 +307,46 @@ img {
 }
 
 .page-header h1 {
+  font-family: var(--font-serif);
   font-size: 2.5rem;
   font-weight: 700;
 }
 
 /* Series card (on writing page) */
 .series-section {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .series-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--color-card-bg);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  padding: 1.5rem;
+  display: block;
   color: var(--color-text);
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
 }
 
 .series-card:hover {
-  border-color: var(--color-primary);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   color: var(--color-text);
 }
 
 .series-card-content h2 {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
 .series-card-content p {
   color: var(--color-text-light);
-  font-size: 0.95rem;
-  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.25rem;
 }
 
 .series-count {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--color-text-light);
 }
 
 .series-arrow {
-  font-size: 1.5rem;
-  color: var(--color-text-light);
-  transition: transform 0.2s ease;
-}
-
-.series-card:hover .series-arrow {
-  transform: translateX(4px);
-  color: var(--color-primary);
+  display: none;
 }
 
 /* Series index page */

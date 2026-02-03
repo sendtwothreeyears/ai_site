@@ -367,7 +367,6 @@ function readProjectsFromFolder(folderPath) {
 function generateNav(activePage = "") {
   const homeActive = activePage === "home" ? ' class="active"' : "";
   const writingActive = activePage === "writing" ? ' class="active"' : "";
-  const fractalActive = activePage === "fractal" ? ' class="active"' : "";
 
   return `
     <header class="site-header">
@@ -375,7 +374,6 @@ function generateNav(activePage = "") {
             <ul class="nav-links">
                 <li><a href="/"${homeActive}>home</a></li>
                 <li><a href="/writing.html"${writingActive}>writing</a></li>
-                <li><a href="/series/fractal.html"${fractalActive}>fractal</a></li>
             </ul>
         </nav>
     </header>`;
