@@ -67,6 +67,10 @@ img {
   max-width: 720px;
 }
 
+.container-post {
+  max-width: 700px;
+}
+
 /* Header */
 .site-header {
   background: var(--color-card-bg);
@@ -424,43 +428,16 @@ img {
 
 /* Series navigation (on post pages) */
 .series-nav {
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  padding: 1rem;
   margin: 1.5rem 0;
 }
 
-.series-info {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
+.back-link {
+  color: var(--color-text-light);
   font-size: 0.9rem;
 }
 
-.series-info a {
-  font-weight: 600;
-}
-
-.series-progress {
-  color: var(--color-text-light);
-}
-
-.series-links {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.85rem;
-}
-
-.prev-post,
-.next-post {
-  color: var(--color-text-light);
-}
-
-.prev-post:hover,
-.next-post:hover {
-  color: var(--color-primary);
+.back-link:hover {
+  color: var(--color-text);
 }
 
 /* Projects section */
