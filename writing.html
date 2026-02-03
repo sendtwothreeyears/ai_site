@@ -1,70 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Writing - My Blog</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <header class="site-header">
-        <nav class="nav-container">
-            <ul class="nav-links">
-                <li><a href="/">home</a></li>
-                <li><a href="/writing.html" class="active">writing</a></li>
-                <li><a href="/series/fractal.html">fractal</a></li>
-            </ul>
-        </nav>
+      <nav class="nav-container">
+        <ul class="nav-links">
+          <li><a href="/">home</a></li>
+          <li><a href="/writing.html" class="active">writing</a></li>
+          <li><a href="/series/fractal.html">fractal</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main class="container container-narrow">
-        <section class="page-header">
-            <h1>all writing</h1>
-        </section>
+      <section class="page-header">
+        <h1>all writing</h1>
+      </section>
 
-        <section class="series-section">
+      <section class="series-section">
+        <a href="/series/fractal.html" class="series-card">
+          <div class="series-card-content">
+            <h2>Fractal Accelerator</h2>
+            <p>A 90-day journey through an AI accelerator in NYC.</p>
+            <span class="series-count">2 posts</span>
+          </div>
+          <span class="series-arrow">→</span>
+        </a>
+      </section>
 
-            <a href="/series/fractal.html" class="series-card">
-                <div class="series-card-content">
-                    <h2>Fractal Bootcamp</h2>
-                    <p>A 90-day journey through an AI accelerator in NYC.</p>
-                    <span class="series-count">2 posts</span>
-                </div>
-                <span class="series-arrow">→</span>
-            </a>
-        </section>
+      <section class="posts">
+        <article class="post-card">
+          <h2 class="post-title">
+            <a
+              href="/posts/1-how-one-silly-idea-helped-me-reach-the-front-page-of-the-internet.html"
+              >How One Silly Idea Helped Me Reach The "Front Page" of the
+              Internet</a
+            >
+          </h2>
+          <p class="post-excerpt">
+            I launched a simple little app that went 2 on Reddit's
+            NBA subreddit, which has 7 million+ subscribers. Here's the original
+            post
+          </p>
+        </article>
 
-        <section class="posts">
+        <article class="post-card">
+          <h2 class="post-title">
+            <a
+              href="/posts/2-a-lesson-on-self-actualization-through-kobe-bryant-s-surprisingly-relatable-introversion.html"
+              >A Lesson On Self-Actualization Through Kobe Bryant's
+              (Surprisingly Relatable) Introversion</a
+            >
+          </h2>
+          <p class="post-excerpt">
+            If I told you anything about Kobe Bryant’s basketball and
+            professional career, it would be nothing short of marvelous.
+          </p>
+        </article>
 
-            <article class="post-card">
-                <h2 class="post-title"><a href="/posts/1-how-one-silly-idea-helped-me-reach-the-front-page-of-the-internet.html">How One Silly Idea Helped Me Reach The "Front Page" of the Internet</a></h2>
-                <p class="post-excerpt">I launched a simple little app that went 2 on Reddit's NBA subreddit, which has 7 million+ subscribers. Here's the original post</p>
-            </article>
+        <article class="post-card">
+          <h2 class="post-title">
+            <a
+              href="/posts/3-how-to-take-control-of-your-bookmarks-folder-using-notion.html"
+              >How To Take Control of Your Bookmarks Folder Using Notion</a
+            >
+          </h2>
+          <p class="post-excerpt">
+            If you're anything like me, you read a lot of information online,
+            but hoard lots more.
+          </p>
+        </article>
 
-            <article class="post-card">
-                <h2 class="post-title"><a href="/posts/2-a-lesson-on-self-actualization-through-kobe-bryant-s-surprisingly-relatable-introversion.html">A Lesson On Self-Actualization Through Kobe Bryant's (Surprisingly Relatable) Introversion</a></h2>
-                <p class="post-excerpt">If I told you anything about Kobe Bryant’s basketball and professional career, it would be nothing short of marvelous.</p>
-            </article>
-
-            <article class="post-card">
-                <h2 class="post-title"><a href="/posts/3-how-to-take-control-of-your-bookmarks-folder-using-notion.html">How To Take Control of Your Bookmarks Folder Using Notion</a></h2>
-                <p class="post-excerpt">If you're anything like me, you read a lot of information online, but hoard lots more.</p>
-            </article>
-
-            <article class="post-card">
-                <h2 class="post-title"><a href="/posts/4-understanding-the-event-loop-through-settimeout.html">Understanding the Event Loop through setTimeout</a></h2>
-                <p class="post-excerpt">One of my favorite features of JavaScript is its event loop and how it handles concurrency given JavaScript’s single-threaded nature. Specifically, th...</p>
-            </article>
-        </section>
+        <article class="post-card">
+          <h2 class="post-title">
+            <a
+              href="/posts/4-understanding-the-event-loop-through-settimeout.html"
+              >Understanding the Event Loop through setTimeout</a
+            >
+          </h2>
+          <p class="post-excerpt">
+            One of my favorite features of JavaScript is its event loop and how
+            it handles concurrency given JavaScript’s single-threaded nature.
+            Specifically, th...
+          </p>
+        </article>
+      </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2026 My Blog. All rights reserved.</p>
-        </div>
-    </footer>
-
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>

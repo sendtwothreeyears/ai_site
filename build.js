@@ -421,11 +421,6 @@ function generatePostHTML(post, seriesPosts = null, isFractal = false) {
         </article>
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; ${new Date().getFullYear()} ${SITE_TITLE}. All rights reserved.</p>
-        </div>
-    </footer>
 
     <script src="../js/main.js"></script>
 </body>
@@ -514,11 +509,6 @@ ${projectCards}
         }
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; ${new Date().getFullYear()} ${SITE_TITLE}. All rights reserved.</p>
-        </div>
-    </footer>
 
     <script src="js/main.js"></script>
 </body>
@@ -542,7 +532,7 @@ function generateWritingHTML(articles, fractalPosts) {
       ? `
             <a href="/series/fractal.html" class="series-card">
                 <div class="series-card-content">
-                    <h2>Fractal Bootcamp</h2>
+                    <h2>Fractal Accelerator</h2>
                     <p>A 90-day journey through an AI accelerator in NYC.</p>
                     <span class="series-count">${fractalPosts.length} posts</span>
                 </div>
@@ -575,11 +565,6 @@ ${articleCards}
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; ${new Date().getFullYear()} ${SITE_TITLE}. All rights reserved.</p>
-        </div>
-    </footer>
 
     <script src="js/main.js"></script>
 </body>
@@ -624,11 +609,6 @@ ${postList}
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; ${new Date().getFullYear()} ${SITE_TITLE}. All rights reserved.</p>
-        </div>
-    </footer>
 
     <script src="../js/main.js"></script>
 </body>
