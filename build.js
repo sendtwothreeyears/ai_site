@@ -379,7 +379,7 @@ function generatePostHTML(post, seriesPosts = null, isFractal = false) {
             <nav class="series-nav">
                 <div class="series-info">
                     <a href="/series/fractal.html">Fractal</a>
-                    <span class="series-progress">Part ${currentIndex + 1} of ${seriesPosts.length}</span>
+                    <span class="series-progress">Part ${currentIndex} of ${seriesPosts.length}</span>
                 </div>
                 <div class="series-links">
                     ${prevPost ? `<a href="/posts/${prevPost.slug}.html" class="prev-post">← ${prevPost.title}</a>` : '<span></span>'}
@@ -573,7 +573,7 @@ ${articleCards}
 function generateSeriesHTML(seriesName, posts) {
     const postList = posts.map((post, index) => `
                 <li class="series-item">
-                    <span class="series-item-number">${index + 1}</span>
+                    <span class="series-item-number">${index}</span>
                     <a href="/posts/${post.slug}.html">${post.title}</a>
                     <time>${formatDate(post.date)}</time>
                 </li>`).join('\n');
@@ -647,7 +647,7 @@ async function build() {
     // Read posts from each folder
     // Fractal requires numbered files, Main does not
     const fractalPosts = readPostsFromFolder(FRACTAL_SOURCE, true)
-        .sort((a, b) => (a.postNumber || 0) - (b.postNumber || 0));
+        .sort((a, b) => (a.postNumber ?? 0) - (b.postNumber ?? 0));
 
     const mainPosts = readPostsFromFolder(MAIN_SOURCE, false)
         .sort((a, b) => (b.date || 0) - (a.date || 0));
